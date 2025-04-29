@@ -1,4 +1,6 @@
 # 4.Execution_of_NetworkCommands
+# NAME : MOHAMED HAFEEZ S
+# REG NO : 212224040193
 ## AIM :Use of Network commands in Real Time environment
 ## Software : Command Prompt And Network Protocol Analyzer
 ## Procedure: To do this EXPERIMENT- follows these steps:
@@ -25,8 +27,17 @@ This commands includes
 <BR>
 • Other IP Commands e.g. show ip route etc.
 <BR>
-
+import socket
+ s=socket.socket()
+ s.connect(('localhost',8000))
+ while True:
+ ip=input("Enter the website you want to ping ")
+ s.send(ip.encode())
+ print(s.recv(1024).decode()) 
+ #TRACEROUTE command:
+ traceroute www.google.com
 ## Output
+![Screenshot 2025-04-29 231839](https://github.com/user-attachments/assets/1459fb28-840e-465a-a5d8-37cbc6ca63e1)
 
 ## Result
 Thus Execution of Network commands Performed 
